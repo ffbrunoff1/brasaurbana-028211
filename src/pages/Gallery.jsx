@@ -1,36 +1,57 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import { Flame, Image, Play } from 'lucide-react'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Flame, Image, Play, Star, Utensils } from 'lucide-react';
 
 export default function Gallery() {
   const galleryImages = [
     {
-      src: "https://qotdwocbcoirjlqjkjhq.supabase.co/storage/v1/object/public/user-files/963c07ff-56bc-4a19-956d-c9f2a6a78190/1762990545155_nibkug0s7fk_Brasa_Smash.webp",
-      title: "Brasa Smash",
-      description: "Duplo smash na chapa de ferro"
+      src: 'https://qotdwocbcoirjlqjkjhq.supabase.co/storage/v1/object/public/user-files/963c07ff-56bc-4a19-956d-c9f2a6a78190/1762990545155_nibkug0s7fk_Brasa_Smash.webp',
+      title: 'Brasa Smash',
+      description: 'Duplo smash na chapa de ferro',
     },
     {
-      src: "https://qotdwocbcoirjlqjkjhq.supabase.co/storage/v1/object/public/user-files/963c07ff-56bc-4a19-956d-c9f2a6a78190/1762990546353_phsulrr7zg_Fuma_a_BBQ.webp",
-      title: "Fumaça BBQ",
-      description: "Cebola caramelizada e molho BBQ artesanal"
+      src: 'https://qotdwocbcoirjlqjkjhq.supabase.co/storage/v1/object/public/user-files/963c07ff-56bc-4a19-956d-c9f2a6a78190/1762990546353_phsulrr7zg_Fuma_a_BBQ.webp',
+      title: 'Fumaça BBQ',
+      description: 'Cebola caramelizada e molho BBQ artesanal',
     },
     {
-      src: "https://qotdwocbcoirjlqjkjhq.supabase.co/storage/v1/object/public/user-files/963c07ff-56bc-4a19-956d-c9f2a6a78190/1762990547122_9lptt8sen8_Inferno_Burger.webp",
-      title: "Inferno Burger",
-      description: "Picante com molho de pimenta defumada"
+      src: 'https://qotdwocbcoirjlqjkjhq.supabase.co/storage/v1/object/public/user-files/963c07ff-56bc-4a19-956d-c9f2a6a78190/1762990547122_9lptt8sen8_Inferno_Burger.webp',
+      title: 'Inferno Burger',
+      description: 'Picante com molho de pimenta defumada',
     },
     {
-      src: "https://qotdwocbcoirjlqjkjhq.supabase.co/storage/v1/object/imagens.website.creation/963c07ff-56bc-4a19-956d-c9f2a6a78190/logo_1762990552928_0.png",
-      title: "Nossa Marca",
-      description: "Identidade visual Brasa Urbana"
-    }
-  ]
+      src: 'https://qotdwocbcoirjlqjkjhq.supabase.co/storage/v1/object/imagens.website.creation/963c07ff-56bc-4a19-956d-c9f2a6a78190/logo_1762990552928_0.png',
+      title: 'Nossa Marca',
+      description: 'Identidade visual Brasa Urbana',
+    },
+  ];
+
+  const processSteps = [
+    {
+      icon: Star,
+      title: 'Seleção da Carne',
+      description:
+        'Escolhemos apenas carnes premium, frescas e com a gordura ideal para o sabor perfeito.',
+    },
+    {
+      icon: Utensils,
+      title: 'Smash na Chapa',
+      description:
+        'Prensamos a carne na chapa de ferro, criando a crosta crocante característica.',
+    },
+    {
+      icon: Flame,
+      title: 'Finalização na Brasa',
+      description:
+        'Levamos direto para a brasa, onde o hambúrguer ganha o toque defumado que faz a diferença.',
+    },
+  ];
 
   const GalleryPageContent = () => (
     <div className="pt-32 pb-16">
       <div className="section-padding">
         <div className="container-custom">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -38,8 +59,8 @@ export default function Gallery() {
           >
             <h1 className="heading-medium text-gradient mb-6">Galeria</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Confira nossos hambúrgueres artesanais em ação. Cada imagem conta a história 
-              do sabor que vem do fogo e da paixão pela arte de grelhar.
+              Confira nossos hambúrgueres artesanais em ação. Cada imagem conta a
+              história do sabor que vem do fogo e da paixão pela arte de grelhar.
             </p>
           </motion.div>
 
@@ -51,12 +72,14 @@ export default function Gallery() {
           >
             <div className="flex items-center justify-center space-x-3 mb-4">
               <Image className="h-8 w-8 text-primary-400" />
-              <h2 className="text-2xl font-bold text-white">Nossos Hambúrgueres</h2>
+              <h2 className="text-2xl font-bold text-white">
+                Nossos Hambúrgueres
+              </h2>
               <Image className="h-8 w-8 text-primary-400" />
             </div>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              Cada foto captura a essência do nosso trabalho artesanal: 
-              a crosta dourada, a suculência da carne e o sabor defumado único.
+              Cada foto captura a essência do nosso trabalho artesanal: a crosta
+              dourada, a suculência da carne e o sabor defumado único.
             </p>
           </motion.div>
 
@@ -76,11 +99,11 @@ export default function Gallery() {
                     className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
                     whileHover={{ scale: 1.05 }}
                   />
-                  
+
                   <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent opacity-60" />
-                  
+
                   <div className="absolute inset-0 bg-primary-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  
+
                   <motion.div
                     className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     whileHover={{ scale: 1.1 }}
@@ -108,15 +131,58 @@ export default function Gallery() {
             className="bg-dark-800 border border-dark-700 rounded-2xl p-8 md:p-12 mb-12 text-center"
           >
             <h3 className="text-2xl font-bold text-white mb-6 flex items-center justify-center">
-              <Play className="h-6 w-6 mr-2 text-primary-400" />
-              O Processo Artesanal
+              <Play className="h-6 w-6 mr-2 text-primary-400" />O Processo
+              Artesanal
             </h3>
             <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
-              Nosso processo começa com a seleção criteriosa da carne premium. 
-              Cada hambúrguer é prensado na chapa de ferro em alta temperatura, 
-              criando aquela crosta dourada irresistível. Em seguida, vai direto 
-              para a brasa, onde ganha o toque defumado que é nossa marca registrada.
+              Nosso processo começa com a seleção criteriosa da carne premium. Cada
+              hambúrguer é prensado na chapa de ferro em alta temperatura,
+              criando aquela crosta dourada irresistível. Em seguida, vai direto
+              para a brasa, onde ganha o toque defumado que é nossa marca
+              registrada.
             </p>
-            
+
             <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div className="
+              {processSteps.map((step, index) => {
+                const IconComponent = step.icon;
+                return (
+                  <div key={index}>
+                    <div className="bg-gradient-fire w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <IconComponent className="h-8 w-8 text-white" />
+                    </div>
+                    <h4 className="text-xl font-bold text-white mb-3">
+                      {step.title}
+                    </h4>
+                    <p className="text-gray-300 leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  );
+
+  return (
+    <section className="bg-gradient-dark relative overflow-hidden min-h-screen">
+      <div className="absolute inset-0">
+        <motion.div
+          className="absolute top-1/3 right-1/4 w-80 h-80 bg-primary-500 rounded-full filter blur-3xl opacity-5"
+          animate={{
+            x: [0, -50, 0],
+            y: [0, 30, 0],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+        />
+      </div>
+      <GalleryPageContent />
+    </section>
+  );
+}
