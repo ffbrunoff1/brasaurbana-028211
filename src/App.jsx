@@ -7,7 +7,7 @@ import About from './pages/About';
 import Menu from './pages/Menu';
 import ProductDetail from './pages/ProductDetail';
 import Gallery from './pages/Gallery';
-import Contact from './pages/Contact';
+import Contact from './components/Contact';
 import OrderOnline from './pages/OrderOnline';
 
 export default function App() {
